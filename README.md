@@ -1,2 +1,2 @@
-# homework_templates
-Templates for homework problems
+# Homework Templates
+Templates that I created for homework problems
