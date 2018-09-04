@@ -1,0 +1,66 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, german]{babel}
+
+% type course name and exercisesheet title here %
+\newcommand\course{Course X}
+\newcommand\worksheet{Series X}
+
+% margins %
+\usepackage{geometry}
+ \geometry{
+   a4paper,
+   total={170mm,257mm},
+   left=20mm,
+   top=20mm,
+ }
+
+% header style %
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\rhead{\href{mailto:samuel.pawel@uzh.ch}{Samuel Pawel}}
+\lhead{\course: \worksheet}
+\cfoot{\thepage ~of \pageref{LastPage}}
+
+% math commands %
+\usepackage{amsmath, amssymb}
+\DeclareMathOperator{\E}{\mathbb{E}} % Expectation
+\DeclareMathOperator{\pr}{\mathbb{P}} % Probability
+\DeclareMathOperator{\R}{\mathbb{R}} % Real numbers
+\DeclareMathOperator*{\argmax}{arg\,max} % Argmax
+\DeclareMathOperator*{\argmin}{arg\,min} % Argmin
+\newcommand{\Var}{\mathrm{Var}} % Variance
+\newcommand{\Cov}{\mathrm{Cov}} % Covariance
+\newcommand{\T}{\top} % Transpose
+
+% hyperref customization %
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	pdftitle={\course: \worksheet},
+	pdfauthor={Samuel Pawel}
+}
+
+\begin{document}
+% setting knitr options %
+<<echo = FALSE>>=
+library(knitr)
+opts_chunk$set(fig.height = 4,
+               cache = TRUE,
+               message = FALSE,
+               warning = FALSE)
+@
+
+\section*{Exercise}
+<< >>=
+
+@
+ 
+
+\newpage 
+% print session info %
+<< echo = FALSE >>=
+sessionInfo()
+@
+\end{document}
