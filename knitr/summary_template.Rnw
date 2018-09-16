@@ -58,6 +58,7 @@ rm(list = ls())
 graphics.off()
 library(knitr)
 opts_chunk$set(fig.height = 4,
+               fig.align = "center",
                cache = TRUE,
                message = FALSE,
                warning = FALSE)
