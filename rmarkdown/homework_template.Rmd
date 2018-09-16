@@ -1,0 +1,24 @@
+---
+title: "Course X: Worksheet Y"
+author: "Samuel Pawel"
+date: ""
+output: 
+  html_document:
+    theme: spacelab 
+    highlight: default
+    df_print: paged
+    smart: true
+    toc: false
+    toc_depth: 2
+    toc_float: false
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(fig.height = 4,
+                      fig.align = "center",
+                      cache = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+# Exercise 1

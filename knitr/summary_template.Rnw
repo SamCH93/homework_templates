@@ -1,0 +1,77 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphics}
+\usepackage{amsmath, amssymb}
+
+% type course name here %
+\newcommand\course{Coursename}
+\newcommand\semester{Semester X}
+
+
+% margins %
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+% header style %
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{lastpage}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\rhead{\leftmark}
+\lhead{\course}
+\cfoot{\thepage ~of \pageref{LastPage}}
+
+% titlepage customization %
+\title{\course}
+\author{Samuel Pawel}
+\date{\semester}
+
+% commands %
+\DeclareMathOperator{\E}{\mathbb{E}} 
+\DeclareMathOperator{\pr}{\mathbb{P}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\Var}{\mathrm{Var}} 
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\T}{\top}
+
+% hyperref customization %
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	pdftitle={\course Summary},
+	pdfauthor={Samuel Pawel}
+}
+
+\begin{document}
+
+% cleaning R-environments and knitr settings %
+<<echo = FALSE>>=
+rm(list = ls())
+graphics.off()
+library(knitr)
+opts_chunk$set(fig.height = 4,
+               cache = TRUE,
+               message = FALSE,
+               warning = FALSE)
+@
+
+% titlepage and table of contents %
+\maketitle
+\tableofcontents
+\newpage
+
+
+\newpage 
+% print session info %
+<< echo = FALSE >>=
+#sessionInfo()
+@
+\end{document}

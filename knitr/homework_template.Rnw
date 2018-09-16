@@ -45,11 +45,11 @@
 \begin{document}
 % setting knitr options %
 <<echo = FALSE>>=
-library(knitr)
-opts_chunk$set(fig.height = 4,
-               cache = TRUE,
-               message = FALSE,
-               warning = FALSE)
+knitr::opts_chunk$set(fig.height = 4,
+                      fig.align = "center",
+                      cache = TRUE,
+                      message = FALSE,
+                      warning = FALSE)
 @
 
 \section*{Exercise}
