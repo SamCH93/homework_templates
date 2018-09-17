@@ -2,15 +2,7 @@
 title: "Course X: Worksheet Y"
 author: "Samuel Pawel"
 date: ""
-output: 
-  html_document:
-    theme: spacelab 
-    highlight: default
-    df_print: paged
-    smart: true
-    toc: false
-    toc_depth: 2
-    toc_float: false
+output: html_document
 ---
 
 ```{r include = FALSE}
