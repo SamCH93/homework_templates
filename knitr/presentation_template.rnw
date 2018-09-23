@@ -1,0 +1,46 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usetheme{metropolis}
+
+
+\title{Presentation Title}
+\author{Samuel Pawel}
+\date{\today}
+
+\begin{document}
+
+<<setup, include=FALSE>>=
+library(knitr)
+opts_chunk$set(fig.align = "center",
+               message = FALSE,
+               warning = FALSE,
+               size='scriptsize')
+@
+
+\maketitle
+
+\section{Math is awesome}
+\begin{frame}{Euler's Formula}
+
+$$e^{i\theta} = \cos(\theta) + i\sin{\theta}$$
+
+\end{frame}
+
+\section{Programming is awesome}
+\begin{frame}[fragile]{Some R-code}
+<< fig.width = 4, fig.height = 2 >>=
+library(ggplot2)
+ggplot(iris, aes(x = Sepal.Width, y = Petal.Width, color = Species)) +
+  geom_point() +
+  scale_color_brewer(palette = "Set1") +
+  theme_minimal()
+@
+\end{frame}
+
+\section{Text is awesome}
+\begin{frame}{Some Text}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et \emph{accusam} et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\end{frame}
+
+\end{document}
